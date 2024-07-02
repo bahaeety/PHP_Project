@@ -22,20 +22,19 @@
 </div>
 <?php require( 'partials/ConnDB.php' ) ?>
 <?php
-    $sql = "SELECT nom,PRIX,Sourceimg,Descrition FROM Nouveautés";
+    $sql = "SELECT nom,PRIX,Sourceimg,Descrition FROM Maisonintelligente";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) { ?>
-    <div class="card d-inline-block" style="width: 18rem;">
-    <img src=<?php echo $row["Sourceimg"] ?>  class="card-img-top" alt="...">
+    <div class="card d-inline-block m-5" style="width: 18rem;">
+    <img src="<?=$row["Sourceimg"] ?>"  class="card-img-top" alt="...">
     <div class="card-body">
-        <h5 class="card-title"><?php echo $row["nom"] ?></h5>
-        <p class="card-text"><?php echo $row['Descrition'] ?></p>
+        <h5 class="card-title"><?= $row["nom"] ?></h5>
+        <p class="card-text"><?= $row['Descrition'] ?></p>
         <a href="#" class="btn btn-primary">acheter</a>
-    </div>
+    </div> 
     </div>
 <?php }} ?>
-
 <?php
     mysqli_close($conn);
 ?>

@@ -22,7 +22,7 @@
 </div>
 <?php require( 'partials/ConnDB.php' ) ?>
 <?php
-    $sql = "SELECT nom,PRIX,Sourceimg,Descrition FROM Nouveautés";
+    $sql = "SELECT nom,PRIX,Sourceimg,Descrition FROM Éclairage";
     $result = mysqli_query($conn, $sql);
     if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_assoc($result)) { ?>
