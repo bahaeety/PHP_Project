@@ -14,6 +14,6 @@
 <body>
     <?php require( 'partials/header.php' ) ?>
     <?php require( 'partials/main.php' ) ?>
-    
+
 </body>
 </html>
