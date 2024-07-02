@@ -9,7 +9,7 @@
             </div>
             <div class="category">
                 <img src="./images/kulturskog-plant-stand-light-green__1185312_pe898352_s5.avif" alt="New">
-                <div class="category-title"><a href="../nouveautes.php">Nouveautés</a></div>
+                <div class="category-title"><a href="nouveautes.php">Nouveautés</a></div>
             </div>
             <div class="category">
               <img src="./images/furniture-fu001.avif" alt="New">
