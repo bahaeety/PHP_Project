@@ -17,11 +17,7 @@
           </div>
             <div class="category">
                 <img src="./images/home-improvement-hi001.webp" alt="All furniture">
-                <div class="category-title">All furniture</div>
-            </div>
-            <div class="category">
-                <img src="./images/kitchen-appliances-ka001.avif" alt="Summer SALE">
-                <div class="category-title">Summer SALE</div>
+                <div class="category-title">Rénovations maison</div>
             </div>
             <div class="category">
                 <img src="./images/smart-home-hs001.webp" alt="All furniture">

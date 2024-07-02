@@ -37,7 +37,7 @@
             <button class="navbar-toggler border-0 shadow-none px-0 me-2" type="button"  data-bs-toggle="offcanvas" href="#offcanvas" role="button" aria-controls="offcanvas">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="acceuil.php">
                 <img class="img-fluid" src="./images/Screenshot_2024-06-27_001249-removebg-preview.png" width="120px" alt="" />
             </a>
             <div class="social-wrapper order-1 order-lg-2 d-flex align-items-center gap-3 ms-auto">
