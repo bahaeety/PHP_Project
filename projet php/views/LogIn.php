@@ -31,29 +31,31 @@
         </form>
 
 
-        <form action="">
-        <h3 class="text-center text-dark">Sign In</h3>
+        <form action="../proccess/form_process.php" method="post">
+        <h3 class="text-center text-dark">Sign up</h3>
         <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="FirstName" aria-label="Username" required>
+        <input type="text" class="form-control" placeholder="FirstName" aria-label="Username" name="prenom" required>
         <span class="input-group-text">&&</span>
-        <input type="text" class="form-control" placeholder="LastName" aria-label="Server" required>
+        <input type="text" class="form-control" placeholder="LastName" aria-label="Server" name="nom" required>
         </div>
         <div class="mb-3">
         <label for="basic-url" class="form-label">Your email</label>
         <div class="input-group">
-            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" required>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" name="email" required>
             <span class="input-group-text" id="basic-addon3">@gmail.com</span>
         </div>
         <div class="form-text" id="basic-addon4">You can only sign up with Gmail</div>
         </div>
-        
+        <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Numero de télé" aria-label="phonenumber" name="Numero_de_télé" required>
+        </div>
         <div class=" input-group mb-3">
         <span class="input-group-text" id="basic-addon1">Password</span>
-        <input type="Password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
+        <input type="Password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" name="entrer_mot_de_passe" required>
         </div>
         <div class=" input-group mb-3">
         <span class="input-group-text" id="basic-addon1">Confirm your Password</span>
-        <input type="Password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
+        <input type="Password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" name="confirmer_mot_de_passe" required>
         </div>
         <div class="d-flex justify-content-center mt-3">
         <button class="btn btn-outline-success">Sign in</button>

@@ -2,14 +2,27 @@ drop database if exists DB_Produit ;
 create database DB_Produit ;
 use DB_Produit;
 
+-- créer la table Produits:
+
 CREATE TAble  Produits(
-    ID_produit int PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    ID_produit INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     nom varchar(30) NOT NULL,
     typeProduit varchar(50),
     PRIX double(10,2) NOT NULL ,
     Sourceimg varchar(255) ,
     Descrition text 
 );
+
+-- créer la table user:
+CREATE TABLE user(
+    ID_user INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    nom VARCHAR(30) NOT NULL,
+    prenom VARCHAR(30) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    numere_cellulaire INT NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
 
 INSERT INTO Produits(nom,PRIX,typeProduit,Sourceimg,Descrition) VALUES 
 ('BÖNSYRSA',3.99,'Blanchisserie','../DB/Image_Produits/Blanchisserie & nettoyage/BÖNSYRSA.avif','Nécessaire de nettoyage, turquoise'),
