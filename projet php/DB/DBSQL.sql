@@ -38,6 +38,11 @@ INSERT INTO Produits(nom,PRIX,typeProduit,Sourceimg,Descrition) VALUES
 ('SLATTUM',169.00,'Lits','../DB/Image_Produits/Lits/SLATTUM.avif','Structure de lit matelassée, Vissle gris foncé, Grand 2 places'),
 ('TARVA',189.00,'Lits','../DB/Image_Produits/Lits/TARVA.avif','Structure de lit, teinté blanc, Deux places'),
 ('BRIMNES',449.00,'Lits','../DB/Image_Produits/Lits/BRIMNES.avif','Lit à tiroirs intégrés, blanc/Luröy, Grand 2 places'),
+('FRIHETEN / KLAGSHAMN',1128.00,'Lits','../DB/Image_Produits/Tous les meubles/FRIHETEN.avif',"Canapé-lit d'angle rgt intégré, Skiftebo gris foncé"),
+('SÖDERHAMN',880.00,'Lits','../DB/Image_Produits/Tous les meubles/SÖDERHAMN.avif',"Canapé, Viarp beige/brun"),
+('OSKARSHAMN',449.00,'Lits','../DB/Image_Produits/Tous les meubles/OSKARSHAMN.avif','Fauteuil à oreilles, Tibbleby beige/gris'),
+('KIVIK',699.00,'Lits','../DB/Image_Produits/Tous les meubles/KIVIK.avif','Canapé, Tibbleby beige/gris'),
+('HAVSTA',400.00,'Lits','../DB/Image_Produits/Tous les meubles/HAVSTA.avif','Armoire, noir, 81x35x123 cm (31 7/8x13 3/4x48 3/8 ")'),
 
 
 ('SYMFONISK',179.00,'Maisonintelligente','../DB/Image_Produits/Maison intelligente/SYMFONISK.avif','Haut-parleur étagère avec pied, blanc/Gen 2'),
@@ -66,14 +71,9 @@ INSERT INTO Produits(nom,PRIX,typeProduit,Sourceimg,Descrition) VALUES
 ('TRIXIG',7.99,'Rénovationsmaison','../DB/Image_Produits/Rénovations maison/TRIXIG.avif','Ensemble de mèches, 20 pièces'),
 ('INVALLNING',29.99,'Rénovationsmaison','../DB/Image_Produits/Rénovations maison/INVALLNING.avif','Desserte, pour boîtes blanc, 68x39 cm (26 3/4x15 3/8 ")'),
 ('RULLEBÖR',39.99,'Rénovationsmaison','../DB/Image_Produits/Rénovations maison/RULLEBÖR.avif','Diable, noir'),
-('ROTHULT',25.99,'Rénovationsmaison','../DB/Image_Produits/Rénovations maison/ROTHULT.avif','Verrou intelligent, blanc'),
+('ROTHULT',25.99,'Rénovationsmaison','../DB/Image_Produits/Rénovations maison/ROTHULT.avif','Verrou intelligent, blanc');
 
 
-('FRIHETEN / KLAGSHAMN',1128.00,'Touslesmeubles','../DB/Image_Produits/Tous les meubles/FRIHETEN.avif',"Canapé-lit d'angle rgt intégré, Skiftebo gris foncé"),
-('SÖDERHAMN',880.00,'Touslesmeubles','../DB/Image_Produits/Tous les meubles/SÖDERHAMN.avif',"Canapé, Viarp beige/brun"),
-('OSKARSHAMN',449.00,'Touslesmeubles','../DB/Image_Produits/Tous les meubles/OSKARSHAMN.avif','Fauteuil à oreilles, Tibbleby beige/gris'),
-('KIVIK',699.00,'Touslesmeubles','../DB/Image_Produits/Tous les meubles/KIVIK.avif','Canapé, Tibbleby beige/gris'),
-('HAVSTA',400.00,'Touslesmeubles','../DB/Image_Produits/Tous les meubles/HAVSTA.avif','Armoire, noir, 81x35x123 cm (31 7/8x13 3/4x48 3/8 ")');
 
 
 
