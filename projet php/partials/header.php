@@ -55,10 +55,12 @@
                     </form>
                 </span>
                 <span>
+                <a href="LogIn.php">
                     <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 8.31836C11.0711 8.31836 12.75 6.63943 12.75 4.56836C12.75 2.49729 11.0711 0.818359 9 0.818359C6.92893 0.818359 5.25 2.49729 5.25 4.56836C5.25 6.63943 6.92893 8.31836 9 8.31836Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
                         <path d="M0.818359 17.1819C0.818359 15.2531 1.68037 13.4032 3.21476 12.0393C4.74915 10.6754 6.83022 9.90918 9.00018 9.90918C11.1701 9.90918 13.2512 10.6754 14.7856 12.0393C16.32 13.4032 17.182 15.2531 17.182 17.1819" stroke="currentColor" stroke-linejoin="round"></path>
                     </svg>
+                    </a>
                 </span>
                 <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-handbag" viewBox="0 0 16 16">

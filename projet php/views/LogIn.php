@@ -18,12 +18,12 @@
         <form action="">
         <h3 class="text-center text-dark">Log In</h3>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Gmail" aria-label="Gmail" aria-describedby="basic-addon2">
+            <input type="text" class="form-control" placeholder="Gmail" aria-label="Gmail" aria-describedby="basic-addon2" required>
             <span class="input-group-text" id="basic-addon2">@gmail.com</span>
         </div>
         <div class=" input-group mb-3">
             <span class="input-group-text" id="basic-addon1">Password</span>
-            <input type="Password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+            <input type="Password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
         </div>
         <div class="d-flex justify-content-center mb-3">
             <button class="btn btn-outline-success">Log in</button>
@@ -33,10 +33,15 @@
 
         <form action="">
         <h3 class="text-center text-dark">Sign In</h3>
+        <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="FirstName" aria-label="Username" required>
+        <span class="input-group-text">&&</span>
+        <input type="text" class="form-control" placeholder="LastName" aria-label="Server" required>
+        </div>
         <div class="mb-3">
         <label for="basic-url" class="form-label">Your email</label>
         <div class="input-group">
-            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" required>
             <span class="input-group-text" id="basic-addon3">@gmail.com</span>
         </div>
         <div class="form-text" id="basic-addon4">You can only sign up with Gmail</div>
@@ -44,22 +49,11 @@
         
         <div class=" input-group mb-3">
         <span class="input-group-text" id="basic-addon1">Password</span>
-        <input type="Password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
+        <input type="Password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
         </div>
         <div class=" input-group mb-3">
         <span class="input-group-text" id="basic-addon1">Confirm your Password</span>
-        <input type="Password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
-        </div>
-        
-        <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="FirstName" aria-label="Username">
-        <span class="input-group-text">&&</span>
-        <input type="text" class="form-control" placeholder="LastName" aria-label="Server">
-        </div>
-        
-        <div class="input-group">
-        <span class="input-group-text">Dicription</span>
-        <textarea class="form-control" aria-label="With textarea"></textarea>
+        <input type="Password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
         </div>
         <div class="d-flex justify-content-center mt-3">
         <button class="btn btn-outline-success">Sign in</button>
