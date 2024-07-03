@@ -32,7 +32,7 @@
         <h5 class="card-title"><?= $row["nom"] ?></h5>
         <h5 class="card-title text-warning"><?= $row["PRIX"].' $' ?></h5>
         <p class="card-text"><?= $row['Descrition'] ?></p>
-        <a href="#" class="btn btn-primary">acheter</a>
+        <a  href="#"><img class="iconPanier" src="../images/panierIcon.png" alt="acheter"></a>
     </div> 
     </div>
 <?php }} ?>

@@ -153,3 +153,7 @@ display: none; /* Chrome, Safari, Opera */
     font-style: normal;
 }
 
+.iconPanier{
+    width: 25px; 
+    height: 25px;
+}
