@@ -22,7 +22,7 @@ CREATE TABLE user(
     numere_cellulaire INT NOT NULL,
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-)
+);
 
 INSERT INTO Produits(nom,PRIX,typeProduit,Sourceimg,Descrition) VALUES 
 ('BÖNSYRSA',3.99,'Blanchisserie','../DB/Image_Produits/Blanchisserie & nettoyage/BÖNSYRSA.avif','Nécessaire de nettoyage, turquoise'),
