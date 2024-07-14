@@ -15,12 +15,15 @@
 <body>
 <?php require( '../partials/header.php' ) ?>
 <main class="container">
-<h1 class="nouveaute-titre">Quoi de neuf dans la gamme HARMONY HOME</h1>
-<br>
-<div>
-<h3 class="nouveaute-titre">Laissez-vous inspirer par la nature: </h3>
-<p class="para-titre">Pourquoi laisser les fleurs et les formes organiques à l’extérieur quand vous pouvez les ramener à l’intérieur ?<br> Il suffit de quelques clics pour que l’ambiance estivale reste fluide.</p>
-</div>
+<h1 class="text-dark display-0 text-center mt-2">Éclairage</h1>
+        <br>
+        <div>
+            <h3 class="nouveaute-titre">Nos articles préférés à prix réduits</h3>
+            <p >
+                Nous travaillons fort tous les jours pour maintenir des prix aussi bas que possible pour vous. Pour vous aider à tirer le meilleur de votre maison, nous baissons le prix de nos articles les plus populaires. 
+                Avec la qualité et le style que vous recherchez à un prix abordable, vous pourrez faire de votre maison de rêve une réalité.
+            </p>
+        </div>
 <?php require( '../partials/ConnDB.php' ) ?>
 <?php
     $sql = "SELECT nom,PRIX,Sourceimg,Descrition FROM Produits where typeProduit ='Éclairage' ";

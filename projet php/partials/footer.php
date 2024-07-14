@@ -49,7 +49,7 @@
                             Useful links
                         </h6>
                         <p>
-                            <a class="text-white">Your Account</a>
+                            <a class="text-white" href="LogIn.php">Your Account</a>
                         </p>
                         <p>
                             <a class="text-white">Gift cards</a>
