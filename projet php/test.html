@@ -305,6 +305,146 @@
     </div>
 </div>
 
+
+<div class="tab-content">
+    <div id="signup">   
+      <h1>Sign Up for Free</h1>
+      
+      <form action="../Controllers/form_process.php" method="post" class="needs-validation" novalidate>
+      
+        <div class="top-row">
+          <div class="field-wrap">
+            <label for="validationCustom01">
+              Prenom<span class="req">*</span>
+            </label>
+            <input type="text" class="form-control" id="validationCustom01" name="prenom" required autocomplete="off">
+            <div class="valid-feedback">
+              Parfait!
+            </div>
+            <div class="invalid-feedback">
+              Entrez un prénom valide
+            </div>
+          </div>
+      
+          <div class="field-wrap">
+            <label for="validationCustom02">
+              Nom<span class="req">*</span>
+            </label>
+            <input type="text" class="form-control" id="validationCustom02" name="nom" required autocomplete="off">
+            <div class="valid-feedback">
+              Parfait!
+            </div>
+            <div class="invalid-feedback">
+              Entrez un nom valide
+            </div>
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label for="validationCustom03">
+            Email Address<span class="req">*</span>
+          </label>
+          <input type="email" class="form-control" id="validationCustom03" name="email" required autocomplete="off">
+          <div class="valid-feedback">
+            Parfait!
+          </div>
+          <div class="invalid-feedback">
+            Entrez un email valide
+          </div>
+        </div>
+        
+        <div class="field-wrap">
+          <label for="validationCustom04">
+            Numero de telephone<span class="req">*</span>
+          </label>
+          <input type="text" class="form-control" id="validationCustom04" name="Numero_de_télé" required autocomplete="off">
+          <div class="valid-feedback">
+            Parfait!
+          </div>
+          <div class="invalid-feedback">
+            Entrez un numéro de téléphone valide
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label for="validationCustom05">
+            Adresse<span class="req">*</span>
+          </label>
+          <input type="text" class="form-control" id="validationCustom05" name="adresse" required autocomplete="off">
+          <div class="valid-feedback">
+            Parfait!
+          </div>
+          <div class="invalid-feedback">
+            Entrez une adresse valide
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label for="validationCustom06">
+            Nouveau mot de passe<span class="req">*</span>
+          </label>
+          <input type="password" class="form-control entrer_mot_de_passe" id="validationCustom06" name="entrer_mot_de_passe" required autocomplete="off">
+          <div class="invalid-feedback">
+            Entrez un mot de passe valide
+          </div>
+        </div>
+
+        <div class="field-wrap">
+          <label for="validationCustom07">
+            Confirmez votre mot de passe<span class="req">*</span>
+          </label>
+          <input type="password" class="form-control confirmez_mot_de_passe" id="validationCustom07" name="confirmer_mot_de_passe" required autocomplete="off">
+          <div class="invalid-feedback">
+            Entrez un mot de passe valide
+          </div>
+          <div class="confirmation" style="display:none; color:red;">
+            Les mots de passe ne sont pas conformes
+          </div>
+        </div>
+        
+        <div class="field-wrap">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        
+        <button type="submit" class="button button-block"/>Sign Up</button>
+      </form>
+    </div>
+    
+    <div id="login">   
+      <h1>Welcome Back!</h1>
+      
+      <form action="/" method="post">
+        <div class="field-wrap">
+          <label for="loginEmail">
+            Email Address<span class="req">*</span>
+          </label>
+          <input type="email" id="loginEmail" required autocomplete="off"/>
+        </div>
+        
+        <div class="field-wrap">
+          <label for="loginPassword">
+            Password<span class="req">*</span>
+          </label>
+          <input type="password" id="loginPassword" required autocomplete="off"/>
+        </div>
+        
+        <p class="forgot"><a href="#">Forgot Password?</a></p>
+        
+        <button class="button button-block"/>Log In</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+  
 </main>
 </body>
 </html>

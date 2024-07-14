@@ -20,8 +20,10 @@ CREATE TABLE user(
     prenom VARCHAR(30) NOT NULL,
     email VARCHAR(50) NOT NULL,
     numere_cellulaire INT NOT NULL,
+    Adresse VARCHAR(255) NOT NULL,
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
 INSERT INTO Produits(nom,PRIX,typeProduit,Sourceimg,Descrition) VALUES 
 ('BÖNSYRSA',3.99,'Blanchisserie','../DB/Image_Produits/Blanchisserie & nettoyage/BÖNSYRSA.avif','Nécessaire de nettoyage, turquoise'),
 ('PEPPRIG',2.99,'Blanchisserie','../DB/Image_Produits/Blanchisserie & nettoyage/PEPPRIG.avif','Tampon nettoyage en microfibre, vert'),
