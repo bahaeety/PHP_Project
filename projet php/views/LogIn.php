@@ -135,24 +135,24 @@
       <div id="login">   
         <h1>Welcome Back!</h1>
         
-        <form action="/" method="post">
+        <form action="../Controllers/admin_process.php" method="post">
           <div class="field-wrap">
             <label for="loginEmail">
               Email Address<span class="req">*</span>
             </label>
-            <input type="email" id="loginEmail" required autocomplete="off"/>
+            <input type="email" id="loginEmail" name="USER" required autocomplete="off"/>
           </div>
           
           <div class="field-wrap">
             <label for="loginPassword">
               Password<span class="req">*</span>
             </label>
-            <input type="password" id="loginPassword" required autocomplete="off"/>
+            <input type="password" id="loginPassword" name="PWD" required autocomplete="off"/>
           </div>
           
           <p class="forgot"><a href="#">Forgot Password?</a></p>
           
-          <button class="button button-block"/>Log In</button>
+          <button type="submit" class="button button-block"/>Log In</button>
         </form>
 
         <div id="emailErrorToast" class="toast align-items-center" role="alert" aria-live="assertive" aria-atomic="true">
