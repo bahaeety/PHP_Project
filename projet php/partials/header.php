@@ -16,10 +16,10 @@
                 <div class="col-auto col-lg-4">
                     <ul class="d-none d-lg-flex align-items-center justify-content-end gap-2 gap-lg-3 list-unstyled mb-0">
                         <li>
-                            <a class="nav-link text-uppercase" href="#">About us</a>
+                            <a class="nav-link text-uppercase" href="../views/Aboutus.php">About us</a>
                         </li>
                         <li>
-                            <a class="nav-link text-uppercase" href="#">Gift cards</a>
+                            <a class="nav-link text-uppercase" href="../views/giftcard.php">Gift cards</a>
                         </li>
                         <li>
                             <a class="nav-link text-uppercase" href="#">Shipping</a>
