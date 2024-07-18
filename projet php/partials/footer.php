@@ -52,13 +52,13 @@
                             <a class="text-white" href="LogIn.php">Your Account</a>
                         </p>
                         <p>
-                            <a class="text-white">Gift cards</a>
+                            <a href="giftcard.php" class="text-white">Gift cards</a>
                         </p>
                         <p>
                             <a class="text-white">Shipping </a>
                         </p>
                         <p>
-                            <a class="text-white">About Us</a>
+                            <a href="Aboutus.php" class="text-white">About Us</a>
                         </p>
                     </div>
 

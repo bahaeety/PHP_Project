@@ -24,36 +24,32 @@
             Gift Cards can be redeemed in-store and online, and never expire.
         </p>
         <div class="row row-cols-3">
-            <div class="card bg-dark text-white m-5" style="width: 20rem;">
-                <img class="card-img-top" src="../images/gift card 1.jpg" alt="Card image cap">
+            <div class="card bg-dark text-white m-5" style="width: 18rem;">
+                <img src="../images/gift card 1.jpg" class="card-img-top" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Physical Gift Card</h5>
                     <p class="card-text">Type in your Gift Card number (found on the back of the card, right below the barcode) and hit go</p>
-                    <a href="#" class="btn btn-primary">Add</a>
                 </div>
             </div>
-            <div class="card bg-danger text-white m-5" style="width: 20rem;">
-                <img class="card-img-top" src="../images/gift card 2 .jpg" alt="Card image cap">
+            <div class="card bg-danger text-white m-5" style="width: 18rem;">
+                <img src="../images/gift card 2 .jpg" class="card-img-top" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Physical Gift Card</h5>
                     <p class="card-text">Type in your Gift Card number (found on the back of the card, right below the barcode) and hit go</p>
-                    <a href="#" class="btn btn-primary">Add</a>
                 </div>
             </div>
-            <div class="card bg-warning text-white m-5" style="width: 20rem;">
-                <img class="card-img-top" src="../images/gifts card 3.jpg" alt="Card image cap">
+            <div class="card bg-warning text-white m-5" style="width: 18rem;">
+                <img src="../images/gifts card 3.jpg" class="card-img-top" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Physical Gift Card</h5>
                     <p class="card-text">Type in your Gift Card number (found on the back of the card, right below the barcode) and hit go</p>
-                    <a href="#" class="btn btn-primary">Add</a>
                 </div>
             </div>
-            <div class="card bg-success text-white m-5" style="width: 20rem;">
-                <img class="card-img-top" src="../images/gifts card 4.jpg" alt="Card image cap">
+            <div class="card bg-success text-white m-5" style="width: 18rem;">
+                <img src="../images/gifts card 4.jpg" class="card-img-top" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Physical Gift Card</h5>
                     <p class="card-text">Type in your Gift Card number (found on the back of the card, right below the barcode) and hit go</p>
-                    <a href="#" class="btn btn-primary">Add</a>
                 </div>
             </div>
         </div>

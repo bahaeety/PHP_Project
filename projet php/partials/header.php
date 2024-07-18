@@ -90,60 +90,6 @@
                             Flooring
                         </a>
                     </li>
-                    <li class="nav-item dropdown dropdown-megamenu position-static">
-                        <a class="nav-link dropdown-toggle d-flex align-items-center justify-content-start justify-content-lg-center gap-2 px-3 py-2 py-lg-4" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Accessories
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
-                                    <path stroke="currentColor" stroke-width="1.3" fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                                </svg>
-                            </span>
-                        </a>
-                        <div class="w-100 dropdown-menu border-0 start-50 translate-middle-x shadow-none py-4 mt-0">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col border-end">
-                                        <h4 class="small text-secondary text-uppercase opacity-50 px-3 mb-3">Furniture</h4>
-                                        <ul class="list-unstyled">
-                                            <li><a class="dropdown-item mb-1" href="#">Tables</a></li>
-                                            <li><a class="dropdown-item mb-1" href="#">Drawers</a></li>
-                                            <li><a class="dropdown-item mb-1" href="#">Mirrors</a></li>
-                                            <li><a class="dropdown-item mb-1" href="#">Cabinets</a></li>
-                                            <li><a class="dropdown-item mb-1" href="#">Wardrobes</a></li>
-                                            <li><a class="dropdown-item mb-1" href="#">Headboards</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col border-end">
-                                        <h4 class="small text-secondary text-uppercase opacity-50 px-3 mb-3">Dining</h4>
-                                        <ul class="list-unstyled">
-                                            <li><a class="dropdown-item mb-1" href="#">Bookcases</a></li>
-                                            <li><a class="dropdown-item mb-1" href="#">Bar Stools</a></li>
-                                            <li><a class="dropdown-item mb-1" href="#">Sideboards</a></li>
-                                            <li><a class="dropdown-item mb-1" href="#">Dining Chairs</a></li>
-                                            <li><a class="dropdown-item mb-1" href="#">Shelving Units</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col">
-                                        <h4 class="small text-secondary text-uppercase opacity-50 px-3 mb-3">Flooring</h4>
-                                        <ul class="list-unstyled">
-                                            <li><a class="dropdown-item mb-1" href="#">Rugs</a></li>
-                                            <li><a class="dropdown-item mb-1" href="#">Carpets</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="#"><img class="img-fluid" src="https://speedyui-static.s3.amazonaws.com/header-ecom/store-ads.jpg" alt=""></a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-3 py-2 py-lg-4" href="#">
-                            Brands
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
