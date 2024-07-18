@@ -11,7 +11,7 @@
                     </span>
                 </div>
                 <div class="col-12 col-md-auto mx-auto">
-                    <a class="nav-link text-uppercase text-center" href="#">Discover what makes BHFO unique!</a>
+                    <a class="nav-link text-uppercase text-center disabled" href="#">Discover what makes BHFO unique!</a>
                 </div>
                 <div class="col-auto col-lg-4">
                     <ul class="d-none d-lg-flex align-items-center justify-content-end gap-2 gap-lg-3 list-unstyled mb-0">
