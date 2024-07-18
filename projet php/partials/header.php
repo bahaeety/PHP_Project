@@ -22,10 +22,10 @@
                             <a class="nav-link text-uppercase" href="../views/giftcard.php">Gift cards</a>
                         </li>
                         <li>
-                            <a class="nav-link text-uppercase" href="#">Shipping</a>
+                            <a class="nav-link text-uppercase" href="Shipping.php">Shipping</a>
                         </li>
                         <li>
-                            <a class="nav-link text-uppercase" href="#">Returns</a>
+                            <a class="nav-link text-uppercase" href="Returns.php">Returns</a>
                         </li>
                     </ul>
                 </div>
