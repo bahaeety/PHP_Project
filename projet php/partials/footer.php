@@ -55,7 +55,7 @@
                             <a href="giftcard.php" class="text-white">Gift cards</a>
                         </p>
                         <p>
-                            <a class="text-white">Shipping </a>
+                            <a class="text-white" href="Shipping.php">Shipping </a>
                         </p>
                         <p>
                             <a href="Aboutus.php" class="text-white">About Us</a>
