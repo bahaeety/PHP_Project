@@ -87,7 +87,7 @@
                 <input type="submit" value="Submit Now">
             </div>
         </form>
-        <form id="login-form" action="../Controllers/admin_process.php"   style="display: none;">
+        <form id="login-form" action="../Controllers/admin_process.php" method="post"  style="display: none;">
             <div class="field email-field">
                 <div class="input-field">
                     <input type="email" placeholder="Enter your email" class="email" name="USER">
