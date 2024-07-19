@@ -24,6 +24,18 @@ CREATE TABLE user(
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
+
+-- créer la table Panier:
+
+CREATE TABLE Panier (
+    cart_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    ID_user INT NOT NULL,
+    ID_produit INT NOT NULL,
+    quantity INT NOT NULL DEFAULT 1,
+    FOREIGN KEY (ID_user) REFERENCES user(ID_user),
+    FOREIGN KEY (ID_produit) REFERENCES Produits(ID_produit)
+);
+
 INSERT INTO Produits(nom,PRIX,typeProduit,Sourceimg,Descrition) VALUES 
 ('BÖNSYRSA',3.99,'Blanchisserie','../DB/Image_Produits/Blanchisserie & nettoyage/BÖNSYRSA.avif','Nécessaire de nettoyage, turquoise'),
 ('PEPPRIG',2.99,'Blanchisserie','../DB/Image_Produits/Blanchisserie & nettoyage/PEPPRIG.avif','Tampon nettoyage en microfibre, vert'),
