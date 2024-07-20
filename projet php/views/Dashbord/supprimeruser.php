@@ -4,6 +4,8 @@
     if(isset($_POST)){
 
         extract($_POST);
+        $sql0 = "DELETE FROM Panier WHERE ID_user = $ID_user";
+        mysqli_query($conn, $sql0);
         $sql = "DELETE FROM user WHERE ID_user = $ID_user";
         
         if (mysqli_query($conn, $sql)) {
