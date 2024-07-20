@@ -56,7 +56,6 @@
         mysqli_stmt_store_result($stmt);
         $test = mysqli_stmt_num_rows($stmt);
         mysqli_stmt_close($stmt);
-        echo $test;
 
         if ($test == 0) {
             $sql = "INSERT INTO Panier (ID_user, ID_produit, quantity) VALUES (?, ?, 1)";

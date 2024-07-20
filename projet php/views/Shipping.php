@@ -14,6 +14,7 @@
 </head>
 
 <body class="bg-white">
+    <?php session_start(); ?>
     <?php require('../partials/header.php') ?>
     <section class="py-3 m-5 py-md-5">
         <div class="container">
