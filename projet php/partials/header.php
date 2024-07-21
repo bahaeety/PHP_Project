@@ -61,7 +61,10 @@
                             <path d="M0.818359 17.1819C0.818359 15.2531 1.68037 13.4032 3.21476 12.0393C4.74915 10.6754 6.83022 9.90918 9.00018 9.90918C11.1701 9.90918 13.2512 10.6754 14.7856 12.0393C16.32 13.4032 17.182 15.2531 17.182 17.1819" stroke="currentColor" stroke-linejoin="round"></path>
                         </svg>
                     </a>
-                    <?php echo 'Bonjour '.$_SESSION['name_user']  ?>
+                    <?php
+                    if (isset($_SESSION['name_user'])) {
+                    echo 'Bonjour '.$_SESSION['name_user']  ;
+                }?>
                 </span>
                 <span>
                     <a href="shoppincard.php">
