@@ -66,6 +66,7 @@
                      echo 'Bonjour '.$_SESSION['name_user'] ;
                     } 
                      ?>
+                   
                 </span>
                 <span>
                     <a href="shoppincard.php">

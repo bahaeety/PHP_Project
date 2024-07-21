@@ -8,7 +8,7 @@ if($USER === "admin@gmail.com" && $PWD === "admin"){
     header("Location: ../views/Dashbord/Dashbord.php");
     exit();
 }
-$sql = "SELECT ID_USER, email, password FROM User WHERE email = ?";
+$sql = "SELECT ID_USER, email,nom, password FROM User WHERE email = ?";
 $stmt = mysqli_prepare($conn, $sql);
 
 if ($stmt) {
@@ -19,6 +19,7 @@ if ($stmt) {
 
     if ($row && password_verify($PWD, $row["password"])) {
         $_SESSION["authentification"] = "user";
+        $_SESSION["name_user"] = $row["nom"];
         $_SESSION['ID_USER'] = $row["ID_USER"];
         $user_id = $row["ID_USER"]; 
 
