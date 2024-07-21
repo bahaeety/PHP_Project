@@ -31,12 +31,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql_insert_user = "INSERT INTO user (nom, prenom, email, numere_cellulaire, Adresse, password) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $sql_insert_user);
     mysqli_stmt_bind_param($stmt, "sssiss", $nom, $prenom, $email, $num, $adress, $mot_de_passe);
+    mysqli_stmt_execute($stmt);
     
-    if (mysqli_stmt_execute($stmt)) {
-        echo "Nouvel utilisateur ajouté avec succès";
-    } else {
-        echo "Erreur : " . mysqli_stmt_error($stmt);
-    }
+    // recuperer id de le user qui vien de s'inscrir
+     $user_id = mysqli_insert_id($conn);
+    $_SESSION['ID_USER'] = $user_id;
+     $sql_get_name = "SELECT prenom FROM user WHERE ID_user = ?";
+     $prepare_sql = mysqli_prepare($conn,$sql_get_name);
+     if($prepare_sql){
+       mysqli_stmt_bind_param($prepare_sql,'i',$user_id);
+       mysqli_stmt_execute($prepare_sql);
+       mysqli_stmt_bind_result($prepare_sql,$name_user);
+       if (mysqli_stmt_fetch($prepare_sql)) {  
+        $_SESSION['name_user'] = $name_user;
+        header("Location:../views/acceuil.php");
+        exit();
+    }    
+ }
+  
 
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
