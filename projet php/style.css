@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: 'Heebo', sans-serif;
 }
+a{
+    text-decoration: none !important;
+}
 
 .speedyui-header .top-bar {
     background-color: #212529;

@@ -39,7 +39,7 @@
                         <h5 class="card-title text-warning"><?= $row["PRIX"] . ' $' ?></h5>
                         <p class="card-text"><?= $row['Descrition'] ?></p>
                         <form method="post" action="" style="display:inline;">
-                            <input type="hidden" name="ID_produit" value="<?= $row['ID_produit'] ?>">
+                            <input type="hidden" name="ID_produit" value="<?= $row['ID_produit']; ?>">
                             <button type="submit" class="bg-white border-0"><img class="iconPanier" src="../images/panierIcon.png" alt="acheter"></button>
                         </form>
                     </div>
