@@ -35,6 +35,27 @@ CREATE TABLE Panier (
     FOREIGN KEY (ID_user) REFERENCES user(ID_user),
     FOREIGN KEY (ID_produit) REFERENCES Produits(ID_produit)
 );
+-- creer la table newsletter: 
+CREATE TABLE Newsletter (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    subscribed_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- creer la table payment :
+CREATE TABLE payments (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    panier_id INT NOT NULL,
+    montant DECIMAL(10, 2) NOT NULL,
+    date_paiement DATETIME DEFAULT CURRENT_TIMESTAMP,
+    methode_paiement VARCHAR(50) NOT NULL,
+    statut ENUM('En attente', 'Complété', 'Annulé') DEFAULT 'En attente',
+    FOREIGN KEY (ID_user) REFERENCES user(ID_user),
+    FOREIGN KEY (cart_id) REFERENCES panier(cart_id)
+);
+
+
 
 INSERT INTO Produits(nom,PRIX,typeProduit,Sourceimg,Descrition) VALUES 
 ('BÖNSYRSA',3.99,'Blanchisserie','../DB/Image_Produits/Blanchisserie & nettoyage/BÖNSYRSA.avif','Nécessaire de nettoyage, turquoise'),
