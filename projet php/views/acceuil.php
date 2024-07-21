@@ -12,7 +12,7 @@
 <script src="../script1.js" defer></script>
 </head>
 <body>
-    <?php session_start();?>
+<?php session_start()?>
     <?php require('../partials/ConnDB.php') ?>
 
     <?php require( '../partials/header.php' ) ?>
