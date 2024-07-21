@@ -24,9 +24,6 @@
 
         <div class="container mt-5">
             <h2 class="mb-4 mb-5">Shopping Cart</h2>
-            <div class="d-flex justify-content-end mb-3">
-                <button class="btn btn-primary" type="submit">Payer</button>
-            </div>
             <table class="table table-bordered mb-5">
                 <thead>
                     <tr>
@@ -97,6 +94,12 @@
                     </tr>
                 </tfoot>
             </table>
+            <div class="col-12">
+                <div id="payer" class="btn d-flex justify-content-center text-center btn-primary mb-3">
+                    <span class="ps-3">Pay <?=$total?>$</span>
+                    <span class="fas fa-arrow-right"></span>
+                </div>
+            </div>
         </div>
         <?php
         mysqli_close($conn);

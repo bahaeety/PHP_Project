@@ -29,6 +29,9 @@ session_start();
 
             }
     }
+    else{
+      header("location: ../views/LogIn.php");
+    }
     mysqli_close($conn);
 
     ?>

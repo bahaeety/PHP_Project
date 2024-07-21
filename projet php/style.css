@@ -162,6 +162,18 @@ display: none; /* Chrome, Safari, Opera */
     height: 25px;
 }
 
+#payer{
+    width: 50%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);
+    border: none;
+    transition: 0.5s;
+    background-size: 200% auto;
+}
 
 
 
