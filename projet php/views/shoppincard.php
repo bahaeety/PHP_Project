@@ -15,6 +15,7 @@
 
 <body>
     <?php session_start();
+    $total = 0;
     require('../partials/header.php') ?>
     <main class="container">
         <?php require('../partials/ConnDB.php') ?>
@@ -23,53 +24,78 @@
 
         <div class="container mt-5">
             <h2 class="mb-4 mb-5">Shopping Cart</h2>
+            <div class="d-flex justify-content-end mb-3">
+                <button class="btn btn-primary" type="submit">Payer</button>
+            </div>
             <table class="table table-bordered mb-5">
                 <thead>
                     <tr>
                         <th>Image</th>
                         <th>Nom du produit</th>
                         <th>Quantité</th>
-                        <th>Prix</th>
+                        <th colspan="2">Prix</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                    if (isset($_SESSION['ID_USER'])){
-                    $user = $_SESSION['ID_USER'];
-                    $sql = "SELECT Produits.nom, Produits.PRIX, Produits.Sourceimg, Panier.quantity 
+                    if (isset($_SESSION['ID_USER'])) {
+                        $user = $_SESSION['ID_USER'];
+                        $sql = "SELECT Produits.nom, Produits.PRIX, Produits.Sourceimg, Panier.quantity,Panier.ID_produit
                     FROM Panier 
                     JOIN Produits ON Produits.ID_produit = Panier.ID_produit 
                     WHERE Panier.ID_user = ?";
-                    $stmt = mysqli_prepare($conn, $sql);
+                        $stmt = mysqli_prepare($conn, $sql);
+                        if ($stmt) {
+                            mysqli_stmt_bind_param($stmt, "i", $user);
+                            mysqli_stmt_execute($stmt);
+                            $result = mysqli_stmt_get_result($stmt);
 
-                    if ($stmt) {
-                        mysqli_stmt_bind_param($stmt, "i", $user);
-                        mysqli_stmt_execute($stmt);
-                        $result = mysqli_stmt_get_result($stmt);
-
-                        if (mysqli_num_rows($result) > 0) {
-                            while ($row = mysqli_fetch_assoc($result)) {
+                            if (mysqli_num_rows($result) > 0) {
+                                while ($row = mysqli_fetch_assoc($result)) {
                     ?>
-                                <tr>
-                                    <td><img src="<?= $row["Sourceimg"] ?>" style="width: 100px; height: 100px" alt="Product Image"></td>
-                                    <td><?= $row["nom"] ?></td>
-                                    <td>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <button class="btn btn-outline-secondary" type="button">-</button>
+                                    <tr>
+                                        <td><img src="<?= $row["Sourceimg"] ?>" style="width: 100px; height: 100px" alt="Product Image"></td>
+                                        <td><?= $row["nom"] ?></td>
+                                        <td>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <form method="post" action="../Controllers/retrancheQuantity.php" style="display:inline;">
+                                                        <input type="hidden" name="ID_produit" value="<?= $row['ID_produit'] ?>">
+                                                        <input type="hidden" name="ID_user" value="<?= $user ?>">
+                                                        <button class="btn btn-outline-secondary" type="submit">-</button>
+                                                    </form>
+                                                </div>
+                                                <input type="text" class="form-control text-center" value="<?= $row["quantity"] ?>" readonly>
+                                                <div class="input-group-append">
+                                                    <form method="post" action="../Controllers/ajoutQuantuty.php" style="display:inline;">
+                                                        <input type="hidden" name="ID_produit" value="<?= $row['ID_produit'] ?>">
+                                                        <input type="hidden" name="ID_user" value="<?= $user ?>">
+                                                        <button class="btn btn-outline-secondary" type="submit">+</button>
+                                                    </form>
+                                                </div>
                                             </div>
-                                            <input type="text" class="form-control text-center" value="<?= $row["quantity"] ?>">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-outline-secondary" type="button">+</button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td><?= $row["PRIX"] ?></td>
-                                </tr>
-                    <?php }
+                                        </td>
+                                        <td><?= $row["PRIX"] ?></td>
+                                        <td>
+                                            <form method="post" action="../Controllers/SupprimerQunatity.php" style="display:inline;">
+                                                <input type="hidden" name="ID_produit" value="<?= $row['ID_produit'] ?>">
+                                                <input type="hidden" name="ID_user" value="<?= $user ?>">
+                                                <button class="btn btn-danger" type="submit">Supprimer</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                    <?php $total += $row["quantity"] * $row["PRIX"];
+                                }
+                            }
                         }
-                    }} ?>
+                    } ?>
                 </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="table-info" colspan="3">Total</td>
+                        <td colspan="2"><?= $total ?> $</td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
         <?php

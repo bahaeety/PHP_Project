@@ -14,6 +14,7 @@
 </head>
 
 <body class="bg-white">
+    <?php session_start(); ?>
     <?php require('../partials/header.php') ?>
     <main class="container">
         <h1 class="text-center mt-3 text-dark display-2">Check your Gift Card balance</h1>
