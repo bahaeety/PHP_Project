@@ -42,6 +42,20 @@
                     </div>
                 </div>
             </div>
+            <h1 class="text-center mb-3">Founders</h1>
+            <div class="row">
+                <div class="col text-center">
+                    <img src="../images/Abdelalim.jpg" class="rounded-circle mb-3" alt="Testimonial" style="width: 120px; height: 120px;">
+                    <h6 class="mb-0">Bini Abdelalim</h6>
+                    <span class="text-muted"> Co-Founder, Harmony Home Inc.</span>
+                </div>
+                <div class="col text-center">
+                    <img src="../images/Bahae.jpg" class="rounded-circle mb-3" alt="Testimonial" style="width: 120px; height: 120px;">
+                    <h6 class="mb-0">Bahae Eddine Tayab</h6>
+                    <span class="text-muted"> Co-Founder, Harmony Home Inc.</span>
+                </div>
+            </div>
+        </div>
     </section>
     <?php require('../partials/footer.php') ?>
 </body>

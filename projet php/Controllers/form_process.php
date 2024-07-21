@@ -12,20 +12,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mot_de_passe = password_hash($entree_mot_de_passe, PASSWORD_DEFAULT);
 
 // Vérification si l'email existe deja
-    // $sql_check_email = "SELECT COUNT(*) AS count FROM user WHERE email = ?";
-    // $stmt = mysqli_prepare($conn, $sql_check_email);
-    // mysqli_stmt_bind_param($stmt, "s", $email);
-    // mysqli_stmt_execute($stmt);
-    // mysqli_stmt_bind_result($stmt, $count);
-    // mysqli_stmt_fetch($stmt);
-    // mysqli_stmt_close($stmt);
+    $sql_check_email = "SELECT COUNT(*) AS count FROM user WHERE email = ?";
+    $stmt = mysqli_prepare($conn, $sql_check_email);
+    mysqli_stmt_bind_param($stmt, "s", $email);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_bind_result($stmt, $count);
+    mysqli_stmt_fetch($stmt);
+    mysqli_stmt_close($stmt);
 
-    // if ($count > 0) {
-    //    $_SESSION['xerreur_email'] = "Il y a déjà un compte avec cet email.";
-    //    header("Location:../views/LogIn.php");
-    //    exit();
+    if ($count > 0) {
+       $_SESSION['xerreur_email'] = "Il y a déjà un compte avec cet email.";
+       header("Location:../views/LogIn.php");
+       exit();
        
-    // }
+    }
 
 // Insérer l'utilisateur s'il n'existe pas deja dans la base de donees
     $sql_insert_user = "INSERT INTO user (nom, prenom, email, numere_cellulaire, Adresse, password) VALUES (?, ?, ?, ?, ?, ?)";
