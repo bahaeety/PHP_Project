@@ -93,7 +93,7 @@
     </div>
     <?php } ?>
     <?php
-    if($_SERVER['REQUEST_METHOD']= 'post'){
+    if($_SERVER['REQUEST_METHOD']= 'post' && isset($_POST['ID_produit'])){
         $ID_produit = $_POST['ID_produit'];
     }
     ?>
