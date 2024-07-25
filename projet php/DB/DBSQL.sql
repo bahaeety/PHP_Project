@@ -51,8 +51,8 @@ CREATE TABLE payments (
     date_paiement DATETIME DEFAULT CURRENT_TIMESTAMP,
     methode_paiement VARCHAR(50) NOT NULL,
     statut ENUM('En attente', 'Complété', 'Annulé') DEFAULT 'En attente',
-    FOREIGN KEY (ID_user) REFERENCES user(ID_user),
-    FOREIGN KEY (cart_id) REFERENCES panier(cart_id)
+    FOREIGN KEY (user_id) REFERENCES user(ID_user),
+    FOREIGN KEY (panier_id) REFERENCES panier(cart_id)
 );
 
 

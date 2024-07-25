@@ -14,7 +14,11 @@
 </head>
 
 <body>
-    <?php session_start();
+    <?php
+
+use App\PayPalPayment;
+
+ session_start();
     $total = 0;
     require('../partials/header.php') ?>
     <main class="container">
@@ -94,13 +98,16 @@
                     </tr>
                 </tfoot>
             </table>
-            <div class="col-12">
-                <div id="payer" class="btn d-flex justify-content-center text-center btn-primary mb-3">
-                    <span class="ps-3">Pay <?=$total?>$</span>
-                    <span class="fas fa-arrow-right"></span>
-                </div>
-            </div>
         </div>
+        
+       <?php
+       if($total > 0){
+       require('../Controllers/payment.php');
+       $total = 100; // replace with your total amount
+       $payment = new App\PayPalPayment();
+       echo $payment->ui($total);
+       }
+       ?>
         <?php
         mysqli_close($conn);
         ?>
