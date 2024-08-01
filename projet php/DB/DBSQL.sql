@@ -55,7 +55,18 @@ CREATE TABLE payments (
     FOREIGN KEY (panier_id) REFERENCES panier(cart_id)
 );
 
+--creer la table des codes promos:
+CREATE TABLE promo_codes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    code VARCHAR(255) NOT NULL,
+    description VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
+INSERT INTO promo_codes (code, description) VALUES
+('ETE2024', "Promotion d'ete 2024"),
+('BIENVENUE', 'PROMO POUR LES NOUVEAUX'),
+('REDUCTION20', 'reduction de 20% sur les achats');
 
 INSERT INTO Produits(nom,PRIX,typeProduit,Sourceimg,Descrition) VALUES 
 ('BÖNSYRSA',3.99,'Blanchisserie','../DB/Image_Produits/Blanchisserie & nettoyage/BÖNSYRSA.avif','Nécessaire de nettoyage, turquoise'),

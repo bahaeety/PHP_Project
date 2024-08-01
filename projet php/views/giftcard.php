@@ -15,6 +15,7 @@
 
 <body class="bg-white">
     <?php session_start(); ?>
+    <?php require('../partials/ConnDB.php') ?>
     <?php require('../partials/header.php') ?>
     <main class="container">
         <h1 class="text-center mt-3 text-dark display-2">Check your Gift Card balance</h1>
@@ -29,6 +30,12 @@
                 <div class="card-body">
                     <h5 class="card-title">Physical Gift Card</h5>
                     <p class="card-text">Type in your Gift Card number (found on the back of the card, right below the barcode) and hit go</p>
+                    <br>
+                    <span class="d-flex align-content-center justify-content-lg-evenly">
+                    <button class=" btn-promo1 btn btn-outline-warning">Code Promo:</button>
+                    <p  class=" promo-code1 ms-1 pt-3"></p>
+                    
+                    </span>
                 </div>
             </div>
             <div class="card bg-danger text-white m-5" style="width: 18rem;">
@@ -36,6 +43,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Physical Gift Card</h5>
                     <p class="card-text">Type in your Gift Card number (found on the back of the card, right below the barcode) and hit go</p>
+                    <span class="d-flex align-content-center justify-content-lg-evenly">
+                    <button class=" btn-promo2 btn btn-outline-dark">Code Promo:</button>
+                    <p  class=" promo-code2 ms-1 pt-3"></p>
+                    </span>
                 </div>
             </div>
             <div class="card bg-warning text-white m-5" style="width: 18rem;">
@@ -43,6 +54,10 @@
                 <div class="card-body">
                     <h5 class="card-title">Physical Gift Card</h5>
                     <p class="card-text">Type in your Gift Card number (found on the back of the card, right below the barcode) and hit go</p>
+                    <span class="d-flex align-content-center justify-content-lg-evenly">
+                    <button class=" btn-promo3 btn btn-outline-danger">Code Promo:</button>
+                    <p  class=" promo-code3 ms-1 pt-3"></p>
+                    </span>
                 </div>
             </div>
             <div class="card bg-success text-white m-5" style="width: 18rem;">
@@ -50,11 +65,35 @@
                 <div class="card-body">
                     <h5 class="card-title">Physical Gift Card</h5>
                     <p class="card-text">Type in your Gift Card number (found on the back of the card, right below the barcode) and hit go</p>
+                    <span class="d-flex align-content-center justify-content-lg-evenly">
+                    <button class=" btn-promo4 btn btn-outline-info">Code Promo:</button>
+                    <p  class=" promo-code4 ms-1 pt-3"></p>
+                    </span>
                 </div>
             </div>
         </div>
     </main>
     <?php require('../partials/footer.php') ?>
+    <?php require('../partials/footer.php'); ?>
+    <script defer>
+    <?php 
+    $sql = "SELECT * FROM promo_codes";
+    $result = mysqli_query($conn, $sql);
+
+    if ( mysqli_num_rows($result) > 0) {
+        $i = 1;
+        while ($row = mysqli_fetch_assoc($result)) {
+            $code = $row['code'];
+            echo "
+            document.querySelector('.btn-promo$i').addEventListener('click', function() {
+                document.querySelector('.promo-code$i').textContent = '$code';
+                this.disabled = true;
+            });";
+            $i++;
+        }
+    }
+    ?>
+    </script>
 </body>
 
 </html>
