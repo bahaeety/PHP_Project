@@ -60,6 +60,7 @@ CREATE TABLE promo_codes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     code VARCHAR(255) NOT NULL,
     description VARCHAR(255),
+    pourcentage int,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
