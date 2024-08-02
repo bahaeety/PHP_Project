@@ -20,9 +20,9 @@ use App\PayPalPayment;
 
  session_start();
     $total = 0;
-    require('../partials/header.php') ?>
+    require('../partials/header.php') ;
+     require('../partials/ConnDB.php') ;?>
     <main class="container">
-        <?php require('../partials/ConnDB.php') ?>
         <h1 class="text-dark display-0 text-center mt-2">Shopping Card</h1>
 
 
@@ -94,16 +94,57 @@ use App\PayPalPayment;
                 <tfoot>
                     <tr>
                         <td class="table-info" colspan="3">Total</td>
-                        <td colspan="2"><?= $total ?> $</td>
+                        <td class="d-flex justify-content-between"><form action="<?= $_SERVER["PHP_SELF"]?>" method="post" class="g-3" ><input id="input_promo" class="form-control" name="code_promo" type="text" ></form>
+                            <button id="cancel_promo_code" class="btn btn-close"></button></td>
+                        <td colspan="2">
+                            <script defer>
+                            
+                            document.getElementById('cancel_promo_code').addEventListener('click', function() {
+        $.ajax({
+            type: 'POST',
+            url: '<?= htmlspecialchars($_SERVER["PHP_SELF"]); ?>',
+            data: { reset_promo: true },
+            success: function() {
+                location.reload();
+            }
+        });
+    });
+                                </script>
+                        <?php
+                        extract($_POST);
+                        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                            if (isset($_POST['reset_promo'])) {
+                                unset($_SESSION['promo_reduction']);
+                                echo "<script>location.reload();</script>";
+                            } else if (isset($_POST['code_promo'])) {
+                                $code_promo = mysqli_real_escape_string($conn, $_POST['code_promo']);
+                                $sql = "SELECT * FROM promo_codes WHERE code = '$code_promo'";
+                                $result = mysqli_query($conn, $sql);
+                                if ($result && mysqli_num_rows($result) > 0) {
+                                    $row = mysqli_fetch_assoc($result);
+                                    $_SESSION['promo_reduction'] = $row["pourcentage"];
+                                    echo "<script>document.getElementById('input_promo').disabled = true;</script>";
+                                }
+                            }
+                        }
+            
+                        if (isset($_SESSION['promo_reduction'])) {
+                            $total = $total - ($total * $_SESSION['promo_reduction']) / 100;
+                            echo "<script>document.getElementById('input_promo').disabled = true;</script>";
+                        }
+                        echo $total;
+                        ?> $</td>
                     </tr>
                 </tfoot>
             </table>
         </div>
         
        <?php
+       
+        
        if($total > 0){
        require('../Controllers/payment.php');
-       $total = 100; // replace with your total amount
+       $total = 100; 
        $payment = new App\PayPalPayment();
        echo $payment->ui($total);
        }
