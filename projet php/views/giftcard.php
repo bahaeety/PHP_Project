@@ -74,7 +74,6 @@
         </div>
     </main>
     <?php require('../partials/footer.php') ?>
-    <?php require('../partials/footer.php'); ?>
     <script defer>
     <?php 
     $sql = "SELECT * FROM promo_codes";

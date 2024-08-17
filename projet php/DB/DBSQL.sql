@@ -64,10 +64,11 @@ CREATE TABLE promo_codes (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-INSERT INTO promo_codes (code, description) VALUES
-('ETE2024', "Promotion d'ete 2024"),
-('BIENVENUE', 'PROMO POUR LES NOUVEAUX'),
-('REDUCTION20', 'reduction de 20% sur les achats');
+INSERT INTO promo_codes (code, description,pourcentage) VALUES
+('ETE2024', "Promotion d'ete 2024",20),
+('BIENVENUE', 'PROMO POUR LES NOUVEAUX',50),
+('REDUCTION20', 'reduction de 20% sur les achats',10),
+('HIVER24',"Promo d hiver ",40);
 
 INSERT INTO Produits(nom,PRIX,typeProduit,Sourceimg,Descrition) VALUES 
 ('BÖNSYRSA',3.99,'Blanchisserie','../DB/Image_Produits/Blanchisserie & nettoyage/BÖNSYRSA.avif','Nécessaire de nettoyage, turquoise'),
