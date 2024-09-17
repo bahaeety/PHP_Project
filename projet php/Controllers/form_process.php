@@ -2,14 +2,14 @@
 require("../partials/ConnDB.php");
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $prenom = $_POST["prenom"];
-    $nom = $_POST["nom"];
-    $email = $_POST["email"];
-    $num = $_POST["Numero_de_télé"];
-    $adress = $_POST["adresse"];
-    $entree_mot_de_passe = $_POST["entrer_mot_de_passe"];
-    $confirmer_mot_de_passe = $_POST["confirmer_mot_de_passe"];
-    $mot_de_passe = password_hash($entree_mot_de_passe, PASSWORD_DEFAULT);
+    $prenom = htmlspecialchars(trim($_POST["prenom"]));
+    $nom = htmlspecialchars(trim($_POST["nom"]));
+    $email = htmlspecialchars(trim($_POST["email"]));
+    $num = htmlspecialchars(trim($_POST["Numero_de_télé"]));
+    $adress = htmlspecialchars(trim($_POST["adresse"]));
+    $entree_mot_de_passe = htmlspecialchars(trim($_POST["entrer_mot_de_passe"]));
+    $confirmer_mot_de_passe = htmlspecialchars(trim($_POST["confirmer_mot_de_passe"]));
+    $mot_de_passe = htmlspecialchars(trim(password_hash($entree_mot_de_passe, PASSWORD_DEFAULT)));
 
 // Vérification si l'email existe deja
     $sql_check_email = "SELECT COUNT(*) AS count FROM user WHERE email = ?";
