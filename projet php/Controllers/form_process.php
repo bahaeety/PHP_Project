@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_bind_result($stmt, $count);
     mysqli_stmt_fetch($stmt);
     mysqli_stmt_close($stmt);
-
+    
     if ($count > 0) {
        $_SESSION['xerreur_email'] = "Il y a déjà un compte avec cet email.";
        header("Location:../views/LogIn.php");
