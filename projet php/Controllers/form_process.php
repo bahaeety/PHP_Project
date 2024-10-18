@@ -2,15 +2,25 @@
 require("../partials/ConnDB.php");
 session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $prenom = htmlspecialchars(trim($_POST["prenom"]));
-    $nom = htmlspecialchars(trim($_POST["nom"]));
-    $email = htmlspecialchars(trim($_POST["email"]));
-    $num = htmlspecialchars(trim($_POST["Numero_de_télé"]));
-    $adress = htmlspecialchars(trim($_POST["adresse"]));
-    $entree_mot_de_passe = htmlspecialchars(trim($_POST["entrer_mot_de_passe"]));
-    $confirmer_mot_de_passe = htmlspecialchars(trim($_POST["confirmer_mot_de_passe"]));
-    $mot_de_passe = htmlspecialchars(trim(password_hash($entree_mot_de_passe, PASSWORD_DEFAULT)));
+    $prenom = strip_tags(htmlspecialchars(trim($_POST["prenom"])));
+    $nom = strip_tags(htmlspecialchars(trim($_POST["nom"])));
+    $email_unsanitized = strip_tags(htmlspecialchars(trim($_POST["email"])));
+    $num_unsanitized = strip_tags(htmlspecialchars(trim($_POST["Numero_de_télé"])));
+    $adress = strip_tags(htmlspecialchars(trim($_POST["adresse"])));
+    $entree_mot_de_passe = strip_tags(htmlspecialchars(trim($_POST["entrer_mot_de_passe"])));
+    $confirmer_mot_de_passe = strip_tags(htmlspecialchars(trim($_POST["confirmer_mot_de_passe"])));
+    $mot_de_passe = strip_tags(htmlspecialchars(trim(password_hash($entree_mot_de_passe, PASSWORD_DEFAULT))));
 
+    $sanitized_email = filter_var($email,FILTER_SANITIZE_EMAIL);
+    $sanitized_num = filter_var($num,FILTER_SANITIZE_NUMBER_INT);
+
+    if(filter_var($sanitized_email, FILTER_DEFAULT)){
+        $email = $sanitized_email;
+    }
+    if(filter_var($num,FILTER_DEFAULT)){
+        $num = $sanitized_num;
+    }
+    
 // Vérification si l'email existe deja
     $sql_check_email = "SELECT COUNT(*) AS count FROM user WHERE email = ?";
     $stmt = mysqli_prepare($conn, $sql_check_email);
