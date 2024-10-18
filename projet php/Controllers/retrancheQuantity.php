@@ -13,6 +13,8 @@
         }
     }   
 
+    error_log("une erreur est survenue: " + mysqli_error($conn),0);
+
     mysqli_close($conn);
 
     header("Location: ../views/shoppincard.php");

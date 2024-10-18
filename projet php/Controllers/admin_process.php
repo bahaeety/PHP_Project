@@ -50,4 +50,6 @@ if ($stmt) {
     header("Location: ../views/logIn.php");
 }
 
+error_log("une erreur est survenue: " + mysqli_error($conn),0);
+
 mysqli_close($conn);

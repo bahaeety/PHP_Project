@@ -32,6 +32,8 @@ session_start();
     else{
       header("location: ../views/LogIn.php");
     }
+    
+    error_log("une erreur est survenue: " + mysqli_error($conn),0);
     mysqli_close($conn);
 
     ?>

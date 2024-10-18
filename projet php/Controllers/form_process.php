@@ -1,6 +1,12 @@
 <?php
 require("../partials/ConnDB.php");
-session_start();
+session_start(
+             [
+               'cookie_lifetime' => 86400,
+               'cookie_secure' => true,  
+               'cookie_httponly' => true,
+             ] 
+             );
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $prenom = strip_tags(htmlspecialchars(trim($_POST["prenom"])));
     $nom = strip_tags(htmlspecialchars(trim($_POST["nom"])));
@@ -29,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_bind_result($stmt, $count);
     mysqli_stmt_fetch($stmt);
     mysqli_stmt_close($stmt);
-    
+
     if ($count > 0) {
        $_SESSION['xerreur_email'] = "Il y a déjà un compte avec cet email.";
        header("Location:../views/LogIn.php");
@@ -49,6 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
  }
   
+    error_log("une erreur est survenue: " + mysqli_error($conn),0);
 
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
