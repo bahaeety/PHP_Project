@@ -116,12 +116,10 @@
           </div>
         <?php } ?>
 
-        <!-- Repeat for other product cards -->
       </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section class="container mt-5">
+\    <section class="container mt-5">
       <div class="row">
         <div class="col-lg-6">
           <h3 class="mb-4">Why Choose Us</h3>
@@ -172,7 +170,6 @@
       </div>
     </section>
 
-    <!-- We Help You Make Modern Interior Design Section -->
     <section class="container mt-5">
       <div class="row">
         <div class="col-lg-6 mb-4">
@@ -216,7 +213,6 @@
       </div>
     </section>
 
-    <!-- Product Showcase Section -->
     <section class="container mt-5">
       <div class="row">
         <div class="col-lg-4 mb-4">
@@ -270,7 +266,6 @@
       </div>
     </section>
 
-    <!-- Testimonials Section -->
     <section class="container mt-5">
       <h3 class="text-center mb-4">Testimonials</h3>
       <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -284,7 +279,6 @@
               <span class="text-muted">Maxi Worker</span>
             </div>
           </div>
-          <!-- Add more carousel items for other testimonials -->
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -297,7 +291,6 @@
       </div>
     </section>
 
-    <!-- Blog Section -->
     <section class="container mt-5">
       <div class="d-flex justify-content-between align-items-center mb-4">
         <h2>Recent Blog</h2>
@@ -353,7 +346,6 @@
     </button>
 
     <script>
-      // Back to top button functionality
       let mybutton = document.getElementById("btn-back-to-top");
 
       window.onscroll = function() {

@@ -86,6 +86,7 @@
             <div class="input-field button">
                 <input type="submit" value="Submit Now">
             </div>
+            <input type="hidden" name="crsf_token" value="<?php echo $crsf_token ?>" >
         </form>
         <form id="login-form" action="../Controllers/admin_process.php" method="post"  style="display: none;">
             <div class="field email-field">
@@ -110,6 +111,8 @@
             <div class="input-field button">
                 <input type="submit" value="Login Now">
             </div>
+            <input type="hidden" name="crsf_token" value="<?php echo $crsf_token ?>" >
+
         </form>
         <div class="switch">
             <span id="switch-to-login">Already have an account? Log in</span>

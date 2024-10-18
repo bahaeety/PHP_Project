@@ -3,6 +3,8 @@ require("../partials/ConnDB.php");
 session_start();
 extract($_POST);
 
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    
 if($USER === "admin@gmail.com" && $PWD === "admin"){
     $_SESSION["authentification"] = "admin";
     header("Location: ../views/Dashbord/Dashbord.php");
@@ -48,6 +50,7 @@ if ($stmt) {
     mysqli_stmt_close($stmt);
 } else {
     header("Location: ../views/logIn.php");
+}
 }
 
 error_log("une erreur est survenue: " + mysqli_error($conn),0);

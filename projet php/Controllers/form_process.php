@@ -7,7 +7,13 @@ session_start(
                'cookie_httponly' => true,
              ] 
              );
+$crsf_token = bin2hex(random_bytes(32));
+$_SESSION['csrf_token'] = $crsf_token;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $token = $_POST['csrf_token'];
+    if(!isset($token) || $token !== $_SESSION['csrf_token']  ){
+        die("Invalid CSRF token");
+    }
     $prenom = strip_tags(htmlspecialchars(trim($_POST["prenom"])));
     $nom = strip_tags(htmlspecialchars(trim($_POST["nom"])));
     $email_unsanitized = strip_tags(htmlspecialchars(trim($_POST["email"])));
